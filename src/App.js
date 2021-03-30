@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Login from './pages/login/login'
 import Dashboard from './pages/dashboard/dashboard'
+import Account from './pages/account/account'
 
 export default class App extends React.Component {
   render() {
@@ -18,6 +19,8 @@ export default class App extends React.Component {
           <Route exact path="/" component={Login}>
           </Route>
           <Route path="/dashboard" component={Dashboard}>
+          </Route>
+          <Route path="/account" component={Account}>
           </Route>
         </Switch>
       </BrowserRouter>

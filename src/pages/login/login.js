@@ -122,7 +122,7 @@ export default function SignInSide(props) {
                     </Avatar>
                     <Typography component="h1" variant="h5">
                         Sign in
-          </Typography>
+                    </Typography>
                     <form className={classes.form} noValidate>
                         <TextField
                             variant="outlined"
@@ -160,12 +160,12 @@ export default function SignInSide(props) {
                             onClick={onClickSubmit}
                         >
                             Sign In
-            </Button>
+                        </Button>
                         <Grid container>
                             <Grid item xs>
                                 <Link href="#" variant="body2">
                                     Forgot password?
-                </Link>
+                                </Link>
                             </Grid>
                             <Grid item>
                                 <Link href="#" variant="body2">

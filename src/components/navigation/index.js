@@ -32,27 +32,27 @@ const user = {
 
 const items = [
   {
-    href: '/app/dashboard',
+    href: '/dashboard',
     icon: BarChartIcon,
     title: 'Dashboard'
   },
   {
-    href: '/app/customers',
+    href: '/customers',
     icon: UsersIcon,
     title: 'Customers'
   },
   {
-    href: '/app/products',
+    href: '/products',
     icon: ShoppingBagIcon,
-    title: 'Products'
+    title: 'Leave'
   },
   {
-    href: '/app/account',
+    href: '/account',
     icon: UserIcon,
     title: 'Account'
   },
   {
-    href: '/app/settings',
+    href: '/settings',
     icon: SettingsIcon,
     title: 'Settings'
   },
@@ -116,7 +116,7 @@ const NavBar = ({ onMobileClose, openMobile,props }) => {
           className={classes.avatar}
           component={RouterLink}
           src={user.avatar}
-          to="/app/account"
+          to="/account"
         />
         <Typography
           className={classes.name}
@@ -151,21 +151,7 @@ const NavBar = ({ onMobileClose, openMobile,props }) => {
         m={2}
         bgcolor="background.dark"
       >
-        
-        {/* <Box
-          display="flex"
-          justifyContent="center"
-          mt={2}
-        >
-          <Button
-            color="primary"
-            component="a"
-            href="https://react-material-kit.devias.io"
-            variant="contained"
-          >
-            Comming Soon
-          </Button>
-        </Box> */}
+       
       </Box>
     </Box>
   );
