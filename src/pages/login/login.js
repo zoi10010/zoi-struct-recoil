@@ -16,7 +16,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import checkLogin from '../../api/loginapi'
 
 //Recoil
-import { LoginDetailsState } from '../../recoil/atoms'
+import { AccountDetailsState, LoginDetailsState } from '../../recoil/atoms'
 import { useRecoilState, useSetRecoilState } from 'recoil'
 
 function Copyright() {
@@ -68,6 +68,7 @@ export default function SignInSide(props) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const setUserList = useSetRecoilState(LoginDetailsState);
+    const setAccountList = useSetRecoilState(AccountDetailsState);
     const [open,setOpen] = useState(false)
     const [error,setError] = useState("")
     const onChangeEmail = (e) => {
@@ -85,6 +86,8 @@ export default function SignInSide(props) {
             // if (res.status === "S") {
                 // setUserList(res.data)
                 setUserList({username :"Denis"})
+                setAccountList({ name :"Celsia Augustine", email :"celsia.gracy@gmail.com", phone :"4642937464", address :"15/22 South Masi Street,Srivaikundam"})
+
                 setOpen(true);
                 setError("Login Success")
                 if(!open){

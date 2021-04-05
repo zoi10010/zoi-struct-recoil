@@ -1,4 +1,4 @@
-import { LoginDetailsState } from './atoms'
+import { AccountDetailsState, LoginDetailsState, FormDetailsState } from './atoms'
 import { selector } from 'recoil'
 
 export const userDetailsState = selector({
@@ -10,6 +10,26 @@ export const userDetailsState = selector({
     },
 })
 
+export const accountDetailsState = selector({
+    key: 'accountDetailsState',
+    get: ({ get }) => {
+        debugger;
+        const user = get(AccountDetailsState)
+        return user
+    },
+})
+ 
+//form
+export const formDetailsState = selector({
+    key: 'formDetailsState',
+    get: ({ get }) => {
+        debugger;
+        const user = get(FormDetailsState)
+        console.log(user.name)
+
+        return user
+    },
+})
 
 
 // export const expenseStatsState = selector({

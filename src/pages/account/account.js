@@ -8,6 +8,10 @@ import GroupIcon from '@material-ui/icons/Group';
 import Nav from '../../components/navigation/index';
 import Toolbar from '../../components/toolbar/index'
 import { Col, Row } from 'react-bootstrap';
+import { useRecoilValue } from 'recoil';
+import { accountDetails, accountDetailsState } from '../../recoil/selectors'
+
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -65,6 +69,7 @@ const BorderLinearProgress = withStyles((theme) => ({
 }))(LinearProgress);
 
 function Account() {
+    const details = useRecoilValue(accountDetailsState);
     const classes = useStyles();
     return (
         <div className={classes.root}>
@@ -132,22 +137,22 @@ function Account() {
                             <Paper className={classes.paper}>
                                 <Row >
                                     <Col className={classes.column}>  Full Name </Col>
-                                    <Col className={classes.det}>Celsia Grace </Col>
+                                    <Col className={classes.det}>{details.name} </Col>
                                 </Row>
                                 <Divider />
                                 <Row >
                                     <Col className={classes.column}>  Email </Col>
-                                    <Col className={classes.det}>celsia.augustine@gmail.com </Col>
+                                    <Col className={classes.det}>{details.email}</Col>
                                 </Row>
                                 <Divider />
                                 <Row >
                                     <Col className={classes.column}> Phone </Col>
-                                    <Col className={classes.det}>454657568</Col>
+                                    <Col className={classes.det}>{details.phone}</Col>
                                 </Row>
                                 <Divider />
                                 <Row >
                                     <Col className={classes.column}> Address </Col>
-                                    <Col className={classes.det}>South Masi Street, Srivaikundam</Col>
+                                    <Col className={classes.det}>{details.address}</Col>
                                 </Row>
                             </Paper>
                             <br />

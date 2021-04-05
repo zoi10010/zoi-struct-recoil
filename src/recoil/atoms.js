@@ -21,5 +21,28 @@ export const LoginDetailsState = atom({
     ],
 })
 
+//Camel Case Only Use in atom - Denis - 14-mar-2021
+export const AccountDetailsState = atom({
+    key: 'AccountDetailsState',
+    default: [],
+    // add these lines to your state atom, 
+    // with the localStorage key you want to use
+    effects_UNSTABLE: [
+        localStorageEffect('accountdetails'),
+    ],
+})
+
+//Camel Case Only Use in atom - Denis - 14-mar-2021
+export const FormDetailsState = atom({
+    key: 'FormDetailsState',
+    default: [],
+    // add these lines to your state atom, 
+    // with the localStorage key you want to use
+    effects_UNSTABLE: [
+        localStorageEffect('formdetails'),
+    ],
+})
+
+
 
 

@@ -42,7 +42,7 @@ const items = [
     title: 'Customers'
   },
   {
-    href: '/products',
+    href: '/leave',
     icon: ShoppingBagIcon,
     title: 'Leave'
   },
